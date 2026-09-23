@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 9</title>
+</head>
+
+<body>
+    <h1>Lista de tarefas</h1>
+    <ul>
+        <li> Estudar
+            <button class="remover"> Remover </button>
+        </li>
+        <li>Fazer exercícios
+            <button class="remover"> Remover </button>
+        </li>
+        <li> Dormir
+            <button class="remover"> Remover</button>
+        </li>
+    
+        <script>
+            const botoes = document.querySelectorAll(".remover");
+            const lista = document.querySelector("ul");
+
+            botoes.forEach(function (botao) {
+                botao.addEventListener("click", function () {
+                    const tarefa = botao.parentElement;
+                    lista.removeChild(tarefa);
+
+                });
+            });
+        </script>
+</body>
+
+</html>
